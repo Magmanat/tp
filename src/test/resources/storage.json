@@ -1,0 +1,30 @@
+{
+	"ADATA XPG SPECTRIX S40G RGB": {
+		"type": "M.2 SSD",
+		"size": 512,
+		"price": 54.99,
+		"brand": "ADATA",
+		"power": 4.5
+	},
+	"Seagate BarraCuda": {
+		"type": "HDD",
+		"size": 1024,
+		"price": 95.0,
+		"brand": "Seagate",
+		"power": 6.8
+	},
+	"Samsung 980 Pro": {
+		"type": "M.2 SSD",
+		"size": 2048,
+		"price": 159.99,
+		"brand": "Samsung",
+		"power": 5.2
+	},
+	"Western Digital Blue": {
+		"type": "SATA SSD",
+		"size": 4096,
+		"price": 229.96,
+		"brand": "Western Digital",
+		"power": 2.8
+	}
+}

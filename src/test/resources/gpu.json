@@ -1,0 +1,26 @@
+{
+	"Gigabyte GAMING OC RTX3050": {
+		"brand": "Gigabyte",
+		"price": 309.99,
+		"power": 115,
+		"size": "mini"
+	},
+	"MSI GeForce RTX 3060 Gaming X12G": {
+		"brand": "MSI",
+		"price": 379.99,
+		"power": 170,
+		"size": "micro"
+	},
+	"Asus TUF GAMING OC RTX3070 Ti": {
+		"brand": "Asus",
+		"price": 786.99,
+		"power": 290,
+		"size": "atx"
+	},
+	"MSI GAMING Z TRIO RTX3080": {
+		"brand": "MSI",
+		"price": 934.06,
+		"power": 350,
+		"size": "atx"
+	}
+}

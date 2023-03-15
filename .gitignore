@@ -24,3 +24,5 @@ text-ui-test/EXPECTED-UNIX.TXT
 #ignore formatter
 *.xml
 
+#ignore user files
+user.json

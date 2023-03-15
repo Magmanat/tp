@@ -5,7 +5,6 @@ import seedu.bigpp.exceptions.PPIndexOutOfBoundsException;
 import seedu.bigpp.datastorage.DataStorage;
 import seedu.bigpp.exceptions.viewerexceptions.ViewerMissingIndexException;
 import seedu.bigpp.exceptions.viewerexceptions.ViewerInvalidTypeException;
-import seedu.bigpp.pc.PCList;
 import seedu.bigpp.ui.UI;
 
 public class ViewerEditCommand extends Command {
@@ -15,7 +14,6 @@ public class ViewerEditCommand extends Command {
 
     /**
      * Edit a PC of the given index from the PC list
-     * 
      * @return the name of the PC created
      */
     @Override
@@ -36,11 +34,11 @@ public class ViewerEditCommand extends Command {
         int pcIndex = Integer.parseInt(argument) - 1;
 
         // throw exception if index selected is out of the PCList range
-        if (pcIndex < 0 || pcIndex >= PCList.getList().size()) {
+        if (pcIndex < 0 || pcIndex >= dataStorage.pcList.size()) {
             throw new PPIndexOutOfBoundsException();
         }
 
         UI.setPCBuilderMode(pcIndex);
-        return "Currently editing - " + PCList.getPC(pcIndex);
+        return "Currently editing PC: " + dataStorage.pcList.get(pcIndex).getName();
     }
 }

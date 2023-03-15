@@ -5,7 +5,6 @@ import seedu.bigpp.exceptions.PPException;
 import seedu.bigpp.datastorage.DataStorage;
 import seedu.bigpp.exceptions.viewerexceptions.ViewerMissingNameException;
 import seedu.bigpp.pc.PC;
-import seedu.bigpp.pc.PCList;
 
 public class ViewerAddCommand extends Command {
 
@@ -25,7 +24,7 @@ public class ViewerAddCommand extends Command {
             throw new ViewerMissingNameException();
         }
         PC pc = new PC(name, false);
-        PCList.addPC(pc);
+        dataStorage.pcList.add(pc);
         return "Custom PC: [ " + name + " ] has been created";
     }
 }

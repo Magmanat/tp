@@ -5,11 +5,11 @@ import seedu.bigpp.component.Component;
 import seedu.bigpp.datastorage.DataStorage;
 import seedu.bigpp.exceptions.PPIndexOutOfBoundsException;
 import seedu.bigpp.exceptions.builderexceptions.BuilderIncorrectComponentException;
+import seedu.bigpp.exceptions.builderexceptions.BuilderInvalidTypeException;
 import seedu.bigpp.exceptions.builderexceptions.BuilderMissingIndexException;
 import seedu.bigpp.exceptions.builderexceptions.BuilderMissingSelectException;
-import seedu.bigpp.exceptions.builderexceptions.BuilderInvalidTypeException;
-import seedu.bigpp.pc.PCList;
 import seedu.bigpp.ui.UI;
+import seedu.bigpp.ui.UIState;
 
 public class BuilderSelectCommand extends Command {
 
@@ -19,13 +19,13 @@ public class BuilderSelectCommand extends Command {
 
     /**
      * Change the Component of the PC that the builder is working on
-     * 
      * @return Added Component message
      */
     @Override
     public String executeCommand(DataStorage dataStorage) throws BuilderMissingSelectException,
             BuilderIncorrectComponentException,
             BuilderMissingIndexException, PPIndexOutOfBoundsException, BuilderInvalidTypeException {
+        assert UI.getUiState() == UIState.PCBUILDER : "UI state should be PCBUILDER";
 
         String inputString = getArguments();
         // throw exception if no component is selected eg. "select"
@@ -36,6 +36,7 @@ public class BuilderSelectCommand extends Command {
         String[] inputArray = inputString.split(" ", 2);
         String componentTypeString = inputArray[0];
         componentTypeString = componentTypeString.toLowerCase();
+        componentTypeString = componentTypeString.trim();
 
         // throw exception if component type is not valid eg. "select jfk"
         if (!dataStorage.stringToComponentListMap.containsKey(componentTypeString)) {
@@ -48,12 +49,14 @@ public class BuilderSelectCommand extends Command {
             throw new BuilderMissingIndexException();
         }
 
+        String indexString = inputArray[1].trim();
+
         // throw exception if index is not a number eg. "select cpu a"
-        if (inputArray[1].matches(".*\\D.*")) {
+        if (indexString.matches(".*\\D.*")) {
             throw new BuilderInvalidTypeException();
         }
 
-        int componentIndex = Integer.parseInt(inputArray[1]) - 1;
+        int componentIndex = Integer.parseInt(indexString) - 1;
 
         // throw exception if index is out of bounds eg. "select cpu 100"
         if (componentIndex < 0 || componentIndex >= dataStorage.stringToComponentListMap.get(inputArray[0]).size()) {
@@ -61,9 +64,12 @@ public class BuilderSelectCommand extends Command {
         }
 
         int pcIndex = UI.builderMenu.getPCIndex();
-        PCList.getPC(pcIndex)
-                .setComponent((Component) dataStorage.stringToComponentListMap.get(componentTypeString).get(
-                        componentIndex));
-        return componentTypeString + " added! : " + PCList.getPC(pcIndex).getComponent(componentTypeString);
+
+        dataStorage.pcList.get(pcIndex)
+                .setComponent((Component) dataStorage.stringToComponentListMap.get(componentTypeString)
+                        .get(componentIndex));
+
+        return componentTypeString + " added! : "
+                + dataStorage.stringToComponentListMap.get(componentTypeString).get(componentIndex).getName();
     }
 }

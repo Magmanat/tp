@@ -18,7 +18,7 @@ PC Part Picker is a command line application for planning your own PC builds.
 #### `delete PC_INDEX`
 **Functionality:** Deletes the PC with index `PC_INDEX`
 
-#### `exit`
+#### `bye`
 **Functionality:** Exits the application
 
 ### From PCBuilder

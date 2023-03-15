@@ -6,7 +6,6 @@ import seedu.bigpp.datastorage.DataStorage;
 import seedu.bigpp.exceptions.viewerexceptions.ViewerMissingIndexException;
 import seedu.bigpp.exceptions.viewerexceptions.ViewerInvalidTypeException;
 import seedu.bigpp.pc.PC;
-import seedu.bigpp.pc.PCList;
 
 public class ViewerViewCommand extends Command {
 
@@ -16,7 +15,6 @@ public class ViewerViewCommand extends Command {
 
     /**
      * Display all the components of the PC of a given index
-     * 
      * @return the components of the PC of that index
      */
     @Override
@@ -37,11 +35,11 @@ public class ViewerViewCommand extends Command {
 
         int pcIndex = Integer.parseInt(argument) - 1;
         // throw exception if index selected is out of the PCList range
-        if (pcIndex < 0 || pcIndex >= PCList.getList().size()) {
+        if (pcIndex < 0 || pcIndex >= dataStorage.pcList.size()) {
             throw new PPIndexOutOfBoundsException();
         }
 
-        PC pc = (PCList.getList()).get(pcIndex);
+        PC pc = (dataStorage.pcList).get(pcIndex);
         return pc.viewComponents();
     }
 }

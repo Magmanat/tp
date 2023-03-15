@@ -12,6 +12,7 @@ public class ByeCommand extends Command {
      */
     @Override
     public String executeCommand(DataStorage dataStorage) {
+        dataStorage.saveUserPcs();
         return "Bye. Hope to see you again soon!";
     }
 }

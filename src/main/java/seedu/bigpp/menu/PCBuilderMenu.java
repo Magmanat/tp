@@ -1,6 +1,6 @@
 package seedu.bigpp.menu;
 
-import seedu.bigpp.pc.PCList;
+import seedu.bigpp.datastorage.DataStorage;
 
 import static seedu.bigpp.ui.UI.out;
 
@@ -16,9 +16,9 @@ public class PCBuilderMenu extends Menu {
         return pcIndex;
     }
 
-    public void printMenu() {
+    public void printMenu(DataStorage dataStorage) {
         out.println("PC builder");
-        out.println(PCList.getPC(pcIndex).viewComponents());
+        out.println(dataStorage.pcList.get(pcIndex).viewComponents());
         out.println("What would you like to do?");
         out.println("Edit name");
         out.println("Set budget");

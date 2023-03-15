@@ -1,0 +1,34 @@
+{
+	"Kingston FURY Beast 16 GB": {
+		"price": 43.98,
+		"memory": 8,
+		"sticks": 2,
+		"speed": 3200,
+		"brand": "Kingston",
+		"power": 5
+	},
+	"G.Skill Ripjaws X 8 GB": {
+		"price": 22.99,
+		"memory": 8,
+		"sticks": 1,
+		"speed": 1600,
+		"brand": "G.Skill",
+		"power": 3
+	},
+	"Corsair Vengeance RGB Pro 32 GB": {
+		"price": 104.99,
+		"memory": 16,
+		"sticks": 2,
+		"speed": 3600,
+		"brand": "Corsair",
+		"power": 8
+	},
+	"G.Skill Trident Z RGB 64 GB": {
+		"price": 164.99,
+		"memory": 32,
+		"sticks": 2,
+		"speed": 3200,
+		"brand": "G.Skill",
+		"power": 10
+	}
+}

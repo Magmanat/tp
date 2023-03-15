@@ -1,14 +1,14 @@
 package seedu.bigpp.menu;
 
-import seedu.bigpp.pc.PCList;
-
 import static seedu.bigpp.ui.UI.out;
+
+import seedu.bigpp.datastorage.DataStorage;
 
 public class PCViewerMenu extends Menu {
 
-    public void printMenu() {
+    public void printMenu(DataStorage dataStorage) {
         out.println("PC viewer");
-        PCList.printPcList();
+        dataStorage.pcList.printPcList();
         out.println("What would you like to do?");
         out.println("Add PC");
         out.println("View PC");

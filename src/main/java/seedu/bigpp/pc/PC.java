@@ -84,6 +84,25 @@ public class PC {
             setChassis((Chassis) component);
         }
     }
+    public void setNullComponent(String componentType){
+        if (componentType.equals("cpu")) {
+            setCPU(null);
+        } else if (componentType.equals("cpu-cooler")) {
+            setCpuCooler(null);
+        } else if (componentType.equals("gpu")) {
+            setGpu(null);
+        } else if (componentType.equals("motherboard")) {
+            setMotherboard(null);
+        } else if (componentType.equals("ram")) {
+            setRam(null);
+        } else if (componentType.equals("storage")) {
+            setStorage(null);
+        } else if (componentType.equals("psu")) {
+            setPsu(null);
+        } else if (componentType.equals("chassis")) {
+            setChassis(null);
+        }
+    }
 
     public CPU getCpu() {
         return cpu;

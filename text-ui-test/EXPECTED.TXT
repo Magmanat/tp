@@ -1,3 +1,5 @@
+User file does not exist. Creating new user file.
+User PCs found, loading...
           _____                    _____                    _____                            _____                    _____          
          /\    \                  /\    \                  /\    \                          /\    \                  /\    \         
         /::\    \                /::\    \                /::\    \                        /::\    \                /::\    \        
@@ -24,7 +26,10 @@
 Welcome to BigPP!
 ===================================================
 PC viewer
-List currently empty!
+Here is the list of PC Builds:
+1.Prebuilt-PC: [beginner] - $813.29
+2.Prebuilt-PC: [intermediate] - $1499.36
+3.Prebuilt-PC: [advanced] - $2149.75
 What would you like to do?
 Add PC
 View PC
@@ -37,7 +42,10 @@ exit
 ===================================================
 PC viewer
 Here is the list of PC Builds:
-1.Custom-PC: [newpc1] - $0.0
+1.Prebuilt-PC: [beginner] - $813.29
+2.Prebuilt-PC: [intermediate] - $1499.36
+3.Prebuilt-PC: [advanced] - $2149.75
+4.Custom-PC: [newpc1] - $0.0
 What would you like to do?
 Add PC
 View PC
@@ -51,8 +59,11 @@ Custom PC: [ newpc1 ] has been created
 ===================================================
 PC viewer
 Here is the list of PC Builds:
-1.Custom-PC: [newpc1] - $0.0
-2.Custom-PC: [newpc2] - $0.0
+1.Prebuilt-PC: [beginner] - $813.29
+2.Prebuilt-PC: [intermediate] - $1499.36
+3.Prebuilt-PC: [advanced] - $2149.75
+4.Custom-PC: [newpc1] - $0.0
+5.Custom-PC: [newpc2] - $0.0
 What would you like to do?
 Add PC
 View PC
@@ -66,7 +77,11 @@ Custom PC: [ newpc2 ] has been created
 ===================================================
 PC viewer
 Here is the list of PC Builds:
-1.Custom-PC: [newpc2] - $0.0
+1.Prebuilt-PC: [beginner] - $813.29
+2.Prebuilt-PC: [intermediate] - $1499.36
+3.Prebuilt-PC: [advanced] - $2149.75
+4.Custom-PC: [newpc1] - $0.0
+5.Custom-PC: [newpc2] - $0.0
 What would you like to do?
 Add PC
 View PC
@@ -75,4 +90,4 @@ Delete PC
 back
 exit
 ===================================================
-Custom PC: [ newpc1 ] has been deleted
+Unable to delete Prebuilt PC

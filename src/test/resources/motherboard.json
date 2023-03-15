@@ -1,0 +1,86 @@
+{
+	"Asus Prime Z590-P WiFi": {
+		"price": 121.99,
+		"brand": "Asus",
+		"formFactor": "ATX",
+		"socket": "LGA1200",
+		"power": 45
+	},
+	"MSI MAG Z690 TOMAHAWK WIFI DDR4": {
+		"price": 239.99,
+		"brand": "MSI",
+		"formFactor": "ATX",
+		"socket": "LGA1700",
+		"power": 47
+	},
+	"Asus TUF GAMING X570-PLUS (WI-FI)": {
+		"price": 209.99,
+		"brand": "Asus",
+		"formFactor": "ATX",
+		"socket": "AM4",
+		"power": 48
+	},
+	"Gigabyte B650 AORUS ELITE AX": {
+		"price": 219.99,
+		"brand": "Gigabyte",
+		"formFactor": "ATX",
+		"socket": "AM5",
+		"power": 42
+	},
+	"Asus TUF GAMING B560M-PLUS WIFI": {
+		"price": 149.99,
+		"brand": "Asus",
+		"formFactor": "Micro",
+		"socket": "LGA1200",
+		"power": 45
+	},
+	"ASRock B760M Steel Legend WiFi": {
+		"price": 139.99,
+		"brand": "ASRock",
+		"formFactor": "Micro",
+		"socket": "LGA1700",
+		"power": 46
+	},
+	"MSI B550M PRO-VDH WIFI": {
+		"price": 119.99,
+		"brand": "MSI",
+		"formFactor": "Micro",
+		"socket": "AM4",
+		"power": 43
+	},
+	"Gigabyte B650M DS3H": {
+		"price": 149.99,
+		"brand": "Gigabyte",
+		"formFactor": "Micro",
+		"socket": "AM5",
+		"power": 47
+	},
+	"MSI MPG B560I GAMING EDGE WIFI": {
+		"price": 149.99,
+		"brand": "MSI",
+		"formFactor": "Mini",
+		"socket": "LGA1200",
+		"power": 46
+	},
+	"Asus ROG STRIX B760-I GAMING WIFI": {
+		"price": 219.99,
+		"brand": "Asus",
+		"formFactor": "Mini",
+		"socket": "LGA1700",
+		"power": 42
+	},
+	"ASRock B550M-ITX/ac": {
+		"price": 119.99,
+		"brand": "ASRock",
+		"formFactor": "Mini",
+		"socket": "AM4",
+		"power": 45
+	},
+	"Gigabyte B650I AORUS ULTRA": {
+		"price": 159.99,
+		"brand": "Gigabyte",
+		"formFactor": "Mini",
+		"socket": "AM5",
+		"power": 49
+	}
+}

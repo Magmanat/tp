@@ -6,8 +6,8 @@ import seedu.bigpp.datastorage.DataStorage;
 import seedu.bigpp.exceptions.builderexceptions.BuilderInvalidNumberBudgetException;
 import seedu.bigpp.exceptions.builderexceptions.BuilderMissingBudgetException;
 import seedu.bigpp.exceptions.builderexceptions.BuilderInvalidTypeBudgetException;
-import seedu.bigpp.pc.PCList;
 import seedu.bigpp.ui.UI;
+import seedu.bigpp.ui.UIState;
 
 public class BuilderEditBudgetCommand extends Command {
 
@@ -21,6 +21,8 @@ public class BuilderEditBudgetCommand extends Command {
      */
     @Override
     public String executeCommand(DataStorage dataStorage) throws PPException {
+        assert UI.getUiState() == UIState.PCBUILDER : "UI state should be PCBUILDER";
+
         String argument = super.getArguments();
         if (argument.equals("")) {
             throw new BuilderMissingBudgetException();
@@ -36,7 +38,7 @@ public class BuilderEditBudgetCommand extends Command {
         }
 
         int pcIndex = UI.builderMenu.getPCIndex();
-        PCList.getPC(pcIndex).setBudget(budget);
-        return "Current build budget is now: " + PCList.getPC(pcIndex).getBudgetString();
+        dataStorage.pcList.get(pcIndex).setBudget(budget);
+        return "Current build budget is now: " + dataStorage.pcList.get(pcIndex).getBudgetString();
     }
 }

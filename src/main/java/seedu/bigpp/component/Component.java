@@ -1,6 +1,6 @@
 package seedu.bigpp.component;
 
-public abstract class Component {
+public class Component {
     protected String name;
     protected String brand;
     protected float price;
@@ -29,5 +29,7 @@ public abstract class Component {
         this.price = price;
     }
 
-    public abstract String toString();
+    public String toString() {
+        return "Name: " + this.name + "\nBrand: " + this.brand + "\nPrice: " + this.price;
+    }
 }
